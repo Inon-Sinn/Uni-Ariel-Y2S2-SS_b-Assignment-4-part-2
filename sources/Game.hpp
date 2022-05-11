@@ -15,7 +15,6 @@ namespace coup{
             bool game_started;
             int _turn;
 
-
         public:
             
             // Constructor and desctructor
@@ -30,6 +29,9 @@ namespace coup{
             
             // return the next turn players name
             std::string turn();
+            void next_turn();
+            std::string cur_Turn();
+            void former_turn();
 
             // Return the name of the winner
             std::string winner();
