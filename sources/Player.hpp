@@ -11,9 +11,20 @@ namespace coup{
 
     class Player{
 
-        public:
+        private:
 
-            std::string role(){
+            bool alive;
+            std::string name;
+
+        public:
+            //constructors
+            Player(Game&,std::string);
+            ~Player() = default;
+            //getter functions
+            bool get_alive();
+            std::string get_name();
+
+            virtual std::string role(){
                 return "test";
             }
 

@@ -10,19 +10,29 @@ namespace coup{
 
     class Game{
 
+        private:
+            std::vector<Player*> player_names;
+            bool game_started;
+            int _turn;
+
+
         public:
+            
+            // Constructor and desctructor
+            Game();
+            ~Game() = default;
 
-            vector<string> players(){
-                return vector<string>();
-            }
+            // methods
+            void add_player(Player* p); 
 
-            std::string turn(){
-                return "test";
-            }
+            // return the Names of the players
+            vector<string> players();
+            
+            // return the next turn players name
+            std::string turn();
 
-            std::string winner(){
-                return "test winner";
-            }
+            // Return the name of the winner
+            std::string winner();
 
     };
 
