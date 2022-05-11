@@ -11,34 +11,9 @@ namespace coup{
 
     class Player{
 
-        private:
-
-            Game game;
-            int player_coins;
-            bool alive;
-            std::string name;
-            std::string last_move;
-
-
         public:
-            //constructors
-            Player(Game&,std::string);
-            ~Player() = default;
 
-            //getter functions
-            bool get_alive() const {return alive;}
-            std::string get_name() const {return name;}
-            int coins() const {return player_coins;}
-            std::string get_last_move() const {return last_move;}
-
-            //setter functions
-            void set_alive(){alive = false;}
-
-            // Auxilliary function
-            void check(bool coup_move);
-
-            // Class Methods
-            virtual std::string role(){
+            std::string role(){
                 return "test";
             }
 
